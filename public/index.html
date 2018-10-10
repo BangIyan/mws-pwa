@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Mws 2018</title>
+  </head>
+  <body>
+  <header>
+    <span class="header_title">Mobile Web Specialist 2018</span>
+  </header>
+
+  <div class="card">
+    <img src="./img/profil.PNG" alt="Profile Pic">
+    <p class="card_title">Mohammad Alviyan Anwari</p>
+    <p class="card_jobs">Day Game Developer, <br> Night Superhero</p>
+    <hr><br>
+    <button class="button button1" type="button" onclick="window.location.href='./week1/week1.html'">
+    Leaflet</button>
+    <button class="button button1" type="button" onclick="window.location.href='./week2/week2.html'">
+    Numbers</button>
+    <button class="button button1" type="button" onclick="window.location.href='./week3/week3.html'">
+    Css Grid</button>
+    <button class="button button1" >Next ?</button>
+  </div>
+
+
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+      .then(res => {
+        console.info('SW Registered');
+      })
+      .catch(err => {
+        console.error('Error in Registering SW', err);
+      })
+    } else {
+      console.log('SW not supported');
+    }
+  </script>
+  </body>
+</html>
